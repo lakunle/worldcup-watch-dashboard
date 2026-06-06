@@ -201,9 +201,8 @@ function friendlyWatchHtml(match) {
 
 function renderFriendlies() {
   const cards = $('friendlyCards');
-  const visible = friendlies.slice(0, 18);
   $('friendlyCount').textContent = `${friendlies.length} listed`;
-  cards.innerHTML = visible.map(match => `
+  cards.innerHTML = friendlies.map(match => `
     <article class="friendly-card">
       <div class="card-topline">
         <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(match.time || 'TBD')}</span></div>
