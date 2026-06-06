@@ -4,40 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>World Cup 2026 Watch Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div>
-      <p class="eyebrow">World Cup 2026</p>
-      <h1>Watch Dashboard</h1>
-      <p class="sub">All fixtures, IPTV channel notes, Manchester United-player alerts, scores, stats and highlights.</p>
-    </div>
-    <div class="hero-card">
-      <div id="nextUnitedLabel" class="label">Next United-interest match</div>
-      <div id="nextUnitedMatch" class="next-match">Loading…</div>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="World Cup Watch Dashboard home">
+      <span class="brand-mark">⚽</span>
+      <span>Watch 26</span>
+    </a>
+    <span class="header-pill">Mobile-first fixture tracker</span>
   </header>
 
-  <main>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">World Cup 2026</p>
+        <h1>Find the match, channel and stream fast.</h1>
+        <p class="sub">A cleaner mobile-first dashboard for fixtures, African teams, Manchester United-player alerts, broadcast notes, scores and highlights.</p>
+      </div>
+      <div class="hero-card">
+        <div id="nextUnitedLabel" class="label">Next United-interest match</div>
+        <div id="nextUnitedMatch" class="next-match">Loading…</div>
+      </div>
+    </section>
+
     <section class="controls" aria-label="Filters">
-      <input id="search" type="search" placeholder="Search team, venue, channel…" />
-      <select id="stageFilter">
+      <div class="search-field">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Search team, venue, channel…" />
+      </div>
+      <select id="stageFilter" aria-label="Stage filter">
         <option value="all">All stages</option>
         <option value="Group stage">Group stage</option>
         <option value="Knockout stage">Knockout stage</option>
       </select>
-      <select id="statusFilter">
+      <select id="statusFilter" aria-label="Status filter">
         <option value="all">All statuses</option>
         <option value="scheduled">Scheduled</option>
         <option value="completed">Completed</option>
+      </select>
+      <select id="continentFilter" aria-label="Country region filter">
+        <option value="all">All countries</option>
+        <option value="Africa">African countries</option>
+        <option value="Europe">European countries</option>
+        <option value="North America">North/Central America</option>
+        <option value="South America">South America</option>
+        <option value="Asia-Pacific">Asia-Pacific</option>
       </select>
       <label class="checkbox"><input id="unitedOnly" type="checkbox" /> Man United only</label>
     </section>
 
     <section class="summary" id="summary"></section>
 
-    <section class="table-wrap">
+    <section class="cards" id="matchCards" aria-label="Match cards"></section>
+
+    <section class="table-wrap" aria-label="Desktop match table">
       <table>
         <thead>
           <tr>
@@ -65,6 +89,24 @@
       <td class="broadcast-uk"></td>
       <td class="result-cell"></td>
     </tr>
+  </template>
+
+  <template id="cardTemplate">
+    <article class="match-card">
+      <div class="card-topline">
+        <div class="card-meta"></div>
+        <div class="card-status"></div>
+      </div>
+      <div class="card-fixture"></div>
+      <div class="card-time"></div>
+      <div class="card-venue"></div>
+      <div class="card-players"></div>
+      <div class="watch-grid">
+        <div class="watch-box card-us"></div>
+        <div class="watch-box card-uk"></div>
+      </div>
+      <div class="card-result"></div>
+    </article>
   </template>
 
   <script src="app.js" type="module"></script>
