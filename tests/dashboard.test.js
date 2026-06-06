@@ -94,6 +94,15 @@ test('dark mode toggle and theme styles are present', () => {
   assert.match(js, /localStorage\.setItem\('watch26-theme'/, 'theme preference should persist');
 });
 
+test('static assets use a cache-busting version so deployed UI refreshes promptly', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(html, /styles\.css\?v=\d+/, 'stylesheet should be versioned to bypass stale browser cache');
+  assert.match(html, /app\.js\?v=\d+/, 'script should be versioned to bypass stale browser cache');
+  assert.match(js, /data\/friendlies\.json\?v=\d+/, 'friendlies data fetch should be versioned to bypass stale browser cache');
+});
+
 test('friendly matches are available for the preparation section', () => {
   const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const friendlies = JSON.parse(fs.readFileSync(new URL('../data/friendlies.json', import.meta.url), 'utf8'));
