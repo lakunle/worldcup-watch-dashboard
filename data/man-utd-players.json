@@ -1,0 +1,14 @@
+{
+  "Argentina": ["Lisandro Martinez", "Alejandro Garnacho"],
+  "Brazil": ["Casemiro", "Antony"],
+  "Cameroon": ["Andre Onana"],
+  "Denmark": ["Rasmus Hojlund", "Christian Eriksen"],
+  "England": ["Kobbie Mainoo", "Luke Shaw", "Harry Maguire", "Mason Mount", "Marcus Rashford"],
+  "Ivory Coast": ["Amad Diallo"],
+  "Morocco": ["Noussair Mazraoui", "Sofyan Amrabat"],
+  "Netherlands": ["Matthijs de Ligt", "Joshua Zirkzee", "Tyrell Malacia"],
+  "Portugal": ["Bruno Fernandes", "Diogo Dalot"],
+  "Scotland": ["Scott McTominay"],
+  "Turkey": ["Altay Bayindir"],
+  "Uruguay": ["Manuel Ugarte", "Facundo Pellistri"]
+}
