@@ -140,6 +140,10 @@ a { color: #135bbf; }
 .friendly-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .75rem; margin-bottom: 1.25rem; }
 .friendly-card { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 1rem; box-shadow: 0 10px 28px rgba(22,22,22,.05); }
 .friendly-card .team-pill { font-size: 1.05rem; }
+.friendly-result { margin-top: .75rem; padding: .75rem; border: 1px solid var(--line); border-radius: 16px; background: var(--hero-card); line-height: 1.45; }
+.friendly-result.completed { border-color: rgba(22, 163, 74, .35); }
+.friendly-result.live { border-color: rgba(234, 88, 12, .4); background: rgba(234, 88, 12, .08); }
+.friendly-result.cancelled { opacity: .8; }
 .friendly-watch { margin-top: .8rem; padding: .75rem; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); line-height: 1.45; }
 .notice { margin-top: .7rem; color: #7c3b00; background: #fff3d7; border: 1px solid #ffd893; border-radius: 14px; padding: .65rem; font-size: .82rem; line-height: 1.4; }
 [data-theme="dark"] .notice { color: #ffd893; background: rgba(255,216,147,.12); border-color: rgba(255,216,147,.28); }

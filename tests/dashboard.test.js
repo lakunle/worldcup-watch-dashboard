@@ -111,6 +111,19 @@ test('friendly matches are available for the preparation section', () => {
   }
 });
 
+test('played friendlies expose scores and highlight links when verified', () => {
+  const friendlies = JSON.parse(fs.readFileSync(new URL('../data/friendlies.json', import.meta.url), 'utf8'));
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  const completed = friendlies.filter(m => m.status === 'completed');
+  assert.ok(completed.length >= 10, `expected completed friendlies to be updated, got ${completed.length}`);
+  assert.ok(completed.some(m => m.homeTeam === 'United States' && m.awayTeam === 'Germany' && m.score?.home === 1 && m.score?.away === 2), 'USA v Germany score should be loaded');
+  assert.ok(completed.some(m => m.homeTeam === 'England' && m.awayTeam === 'New Zealand' && m.score?.home === 1 && m.score?.away === 0), 'England v New Zealand score should be loaded');
+  assert.ok(friendlies.some(m => m.highlightsUrl?.includes('youtube.com/watch')), 'verified YouTube highlight links should be included when available');
+  assert.match(js, /function friendlyResultHtml/, 'friendlies should render score and highlight state');
+  assert.match(js, /Watch highlights/, 'friendlies should include highlight links in the card UI');
+});
+
 test('search also filters preparation friendlies so England v New Zealand is easy to find', () => {
   const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
 

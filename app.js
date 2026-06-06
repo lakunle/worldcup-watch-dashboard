@@ -203,6 +203,26 @@ function friendlyWatchHtml(match) {
   return `${tv}${stream}`;
 }
 
+function friendlyResultHtml(match) {
+  const status = match.statusDetail || match.status || 'Scheduled';
+  if (match.status === 'completed' && match.score) {
+    const score = `<div class="match-title">FT: ${escapeHtml(match.homeTeam)} ${match.score.home}–${match.score.away} ${escapeHtml(match.awayTeam)}</div>`;
+    const highlights = match.highlightsUrl
+      ? `<a href="${escapeHtml(match.highlightsUrl)}" target="_blank" rel="noreferrer">Watch highlights</a><span class="small"> ${escapeHtml(match.highlightsLabel || 'YouTube highlights')}</span>`
+      : '<span class="small">YouTube highlights not verified yet</span>';
+    const source = match.resultSourceUrl ? `<a class="source-link" href="${escapeHtml(match.resultSourceUrl)}" target="_blank" rel="noreferrer">Score source</a>` : '';
+    return `<div class="friendly-result completed">${score}<div>${highlights}</div>${source}</div>`;
+  }
+  if (match.status === 'live' && match.score) {
+    const source = match.resultSourceUrl ? `<a class="source-link" href="${escapeHtml(match.resultSourceUrl)}" target="_blank" rel="noreferrer">Live source</a>` : '';
+    return `<div class="friendly-result live"><div class="match-title">Live: ${escapeHtml(match.homeTeam)} ${match.score.home}–${match.score.away} ${escapeHtml(match.awayTeam)}</div><span class="badge">${escapeHtml(status)}</span>${source}</div>`;
+  }
+  if (match.status === 'cancelled') {
+    return `<div class="friendly-result cancelled"><span class="badge">Cancelled</span></div>`;
+  }
+  return `<div class="friendly-result"><span class="small">${escapeHtml(status)}</span></div>`;
+}
+
 function toTwelveHour(hour, minute) {
   const suffix = hour >= 12 ? 'PM' : 'AM';
   const displayHour = hour % 12 || 12;
@@ -238,6 +258,11 @@ function friendlyText(match) {
     match.venue,
     match.tv?.US,
     match.streaming?.US,
+    match.status,
+    match.statusDetail,
+    match.score?.home,
+    match.score?.away,
+    match.highlightsLabel,
     match.statusNote,
   ].join(' ').toLowerCase();
 }
@@ -262,6 +287,7 @@ function renderFriendlies() {
         <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(formatFriendlyTimeWat(match))}</span></div>
       </div>
       <div class="card-fixture">${fixtureHtml(match)}</div>
+      ${friendlyResultHtml(match)}
       <div class="card-venue">${escapeHtml(match.venue)}</div>
       ${match.statusNote ? `<div class="notice">${escapeHtml(match.statusNote)}</div>` : ''}
       <div class="friendly-watch">${friendlyWatchHtml(match)}</div>
