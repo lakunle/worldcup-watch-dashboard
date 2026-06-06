@@ -1,7 +1,8 @@
-const [matches, unitedPlayers, teams] = await Promise.all([
+const [matches, unitedPlayers, teams, friendlies] = await Promise.all([
   fetch('./data/matches.json').then(r => r.json()),
   fetch('./data/man-utd-players.json').then(r => r.json()),
   fetch('./data/teams.json').then(r => r.json()),
+  fetch('./data/friendlies.json').then(r => r.json()),
 ]);
 
 const state = {
@@ -46,6 +47,39 @@ function hasUnitedInterest(match) {
 function hasContinentInterest(match) {
   if (state.continent === 'all') return true;
   return [match.homeTeam, match.awayTeam].some(team => teamMeta(team).continent === state.continent);
+}
+
+function setTheme(theme) {
+  const next = theme === 'dark' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('watch26-theme', next);
+  const button = $('themeToggle');
+  button.textContent = next === 'dark' ? '☀️' : '🌙';
+  button.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+function initTheme() {
+  const saved = localStorage.getItem('watch26-theme');
+  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+  setTheme(saved || (prefersDark ? 'dark' : 'light'));
+}
+
+function toggleFilters() {
+  const panel = $('filterPanel');
+  const toggle = $('filterToggle');
+  const isOpening = panel.hasAttribute('hidden');
+  panel.toggleAttribute('hidden', !isOpening);
+  toggle.setAttribute('aria-expanded', String(isOpening));
+}
+
+function updateFilterSummary(count) {
+  const parts = [];
+  if (state.search) parts.push(`“${state.search}”`);
+  if (state.stage !== 'all') parts.push(state.stage.replace(' stage', ''));
+  if (state.status !== 'all') parts.push(state.status);
+  if (state.continent !== 'all') parts.push(state.continent === 'Africa' ? 'Africa' : state.continent);
+  if (state.unitedOnly) parts.push('United');
+  $('filterSummary').textContent = `${count} matches${parts.length ? ' · ' + parts.join(' · ') : ''}`;
 }
 
 function formatDate(iso) {
@@ -154,8 +188,33 @@ function renderCards(list) {
 
 function renderMatches() {
   const list = filteredMatches();
+  updateFilterSummary(list.length);
   renderRows(list);
   renderCards(list);
+}
+
+function friendlyWatchHtml(match) {
+  const tv = match.tv?.US ? `<div><strong>US TV:</strong> ${escapeHtml(match.tv.US)}</div>` : '<div class="small">US TV: not listed yet</div>';
+  const stream = match.streaming?.US ? `<div><strong>US stream:</strong> ${escapeHtml(match.streaming.US)}</div>` : '<div class="small">US stream: not listed yet</div>';
+  return `${tv}${stream}`;
+}
+
+function renderFriendlies() {
+  const cards = $('friendlyCards');
+  const visible = friendlies.slice(0, 18);
+  $('friendlyCount').textContent = `${friendlies.length} listed`;
+  cards.innerHTML = visible.map(match => `
+    <article class="friendly-card">
+      <div class="card-topline">
+        <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(match.time || 'TBD')}</span></div>
+      </div>
+      <div class="card-fixture">${fixtureHtml(match)}</div>
+      <div class="card-venue">${escapeHtml(match.venue)}</div>
+      ${match.statusNote ? `<div class="notice">${escapeHtml(match.statusNote)}</div>` : ''}
+      <div class="friendly-watch">${friendlyWatchHtml(match)}</div>
+      <a class="source-link" href="${escapeHtml(match.sourceUrl)}" target="_blank" rel="noreferrer">Source</a>
+    </article>
+  `).join('');
 }
 
 function renderSummary() {
@@ -182,10 +241,14 @@ function renderSummary() {
 }
 
 function render() {
+  initTheme();
   renderSummary();
+  renderFriendlies();
   renderMatches();
 }
 
+$('themeToggle').addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+$('filterToggle').addEventListener('click', toggleFilters);
 $('search').addEventListener('input', e => { state.search = e.target.value; renderMatches(); });
 $('stageFilter').addEventListener('change', e => { state.stage = e.target.value; renderMatches(); });
 $('statusFilter').addEventListener('change', e => { state.status = e.target.value; renderMatches(); });

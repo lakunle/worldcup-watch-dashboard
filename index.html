@@ -15,7 +15,10 @@
       <span class="brand-mark">⚽</span>
       <span>Watch 26</span>
     </a>
-    <span class="header-pill">Mobile-first fixture tracker</span>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Switch to dark mode">🌙</button>
+      <span class="header-pill">Mobile-first fixture tracker</span>
+    </div>
   </header>
 
   <main id="top">
@@ -31,33 +34,52 @@
       </div>
     </section>
 
-    <section class="controls" aria-label="Filters">
-      <div class="search-field">
-        <span aria-hidden="true">⌕</span>
-        <input id="search" type="search" placeholder="Search team, venue, channel…" />
+    <section class="filter-shell" aria-label="Filters">
+      <button id="filterToggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filterPanel">
+        <span>Search & filters</span>
+        <strong id="filterSummary">All matches</strong>
+      </button>
+      <div id="filterPanel" class="filter-panel" hidden>
+        <div class="controls">
+          <div class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search team, venue, channel…" />
+          </div>
+          <select id="stageFilter" aria-label="Stage filter">
+            <option value="all">All stages</option>
+            <option value="Group stage">Group stage</option>
+            <option value="Knockout stage">Knockout stage</option>
+          </select>
+          <select id="statusFilter" aria-label="Status filter">
+            <option value="all">All statuses</option>
+            <option value="scheduled">Scheduled</option>
+            <option value="completed">Completed</option>
+          </select>
+          <select id="continentFilter" aria-label="Country region filter">
+            <option value="all">All countries</option>
+            <option value="Africa">African countries</option>
+            <option value="Europe">European countries</option>
+            <option value="North America">North/Central America</option>
+            <option value="South America">South America</option>
+            <option value="Asia-Pacific">Asia-Pacific</option>
+          </select>
+          <label class="checkbox"><input id="unitedOnly" type="checkbox" /> Man United only</label>
+        </div>
       </div>
-      <select id="stageFilter" aria-label="Stage filter">
-        <option value="all">All stages</option>
-        <option value="Group stage">Group stage</option>
-        <option value="Knockout stage">Knockout stage</option>
-      </select>
-      <select id="statusFilter" aria-label="Status filter">
-        <option value="all">All statuses</option>
-        <option value="scheduled">Scheduled</option>
-        <option value="completed">Completed</option>
-      </select>
-      <select id="continentFilter" aria-label="Country region filter">
-        <option value="all">All countries</option>
-        <option value="Africa">African countries</option>
-        <option value="Europe">European countries</option>
-        <option value="North America">North/Central America</option>
-        <option value="South America">South America</option>
-        <option value="Asia-Pacific">Asia-Pacific</option>
-      </select>
-      <label class="checkbox"><input id="unitedOnly" type="checkbox" /> Man United only</label>
     </section>
 
     <section class="summary" id="summary"></section>
+
+    <section class="friendly-section" aria-label="World Cup preparation friendlies">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Preparation friendlies</p>
+          <h2>Warm-up matches happening now</h2>
+        </div>
+        <span id="friendlyCount" class="section-pill">Loading…</span>
+      </div>
+      <div class="friendly-cards" id="friendlyCards"></div>
+    </section>
 
     <section class="cards" id="matchCards" aria-label="Match cards"></section>
 

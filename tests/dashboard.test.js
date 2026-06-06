@@ -71,3 +71,42 @@ test('mobile-first interface exposes African filters and card layout hooks', () 
   assert.match(css, /@media \(max-width: 760px\)/, 'mobile breakpoint should be optimized for phones');
   assert.match(css, /\.match-card/, 'match cards should be styled');
 });
+
+test('mobile filters are collapsible to avoid covering the viewport', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(html, /id="filterToggle"/, 'filter toggle button should exist');
+  assert.match(html, /id="filterPanel"/, 'collapsible filter panel should exist');
+  assert.match(html, /aria-expanded="false"/, 'filters should start collapsed on mobile');
+  assert.match(css, /\.filter-panel\[hidden\]/, 'hidden filter panel should be removed from layout');
+  assert.match(js, /filterToggle/, 'filter toggle should be wired in JavaScript');
+});
+
+test('dark mode toggle and theme styles are present', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(html, /id="themeToggle"/, 'dark mode toggle should exist');
+  assert.match(css, /\[data-theme="dark"\]/, 'dark theme CSS variables should exist');
+  assert.match(js, /localStorage\.setItem\('watch26-theme'/, 'theme preference should persist');
+});
+
+test('friendly matches are available for the preparation section', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const friendlies = JSON.parse(fs.readFileSync(new URL('../data/friendlies.json', import.meta.url), 'utf8'));
+
+  assert.match(html, /id="friendlyCards"/, 'friendly matches section should exist');
+  assert.ok(friendlies.length >= 10, `expected a useful friendly schedule, got ${friendlies.length}`);
+  assert.ok(friendlies.some(m => m.homeTeam === 'England' && m.awayTeam === 'New Zealand'), 'England v New Zealand friendly should be included');
+  assert.ok(friendlies.some(m => m.tv?.US?.includes('TBS') || m.streaming?.US?.includes('HBO Max')), 'known US viewing options should be captured where available');
+  for (const m of friendlies) {
+    assert.ok(m.date, `friendly date missing for ${m.id}`);
+    assert.ok(m.homeTeam, `homeTeam missing for ${m.id}`);
+    assert.ok(m.awayTeam, `awayTeam missing for ${m.id}`);
+    assert.ok(m.venue, `venue missing for ${m.id}`);
+    assert.ok(m.sourceUrl, `sourceUrl missing for ${m.id}`);
+  }
+});
