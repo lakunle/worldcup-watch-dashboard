@@ -84,11 +84,15 @@ function updateFilterSummary(count) {
 
 function formatDate(iso) {
   const d = new Date(iso);
-  return {
-    main: new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }).format(d),
-    uk: new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/London', timeZoneName: 'short' }).format(d),
-    usEast: new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York', timeZoneName: 'short' }).format(d),
-  };
+  const wat = new Intl.DateTimeFormat('en-GB', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'Africa/Lagos',
+  }).format(d);
+  return { main: `${wat} WAT (GMT+1)` };
 }
 
 function resultHtml(match) {
@@ -149,7 +153,7 @@ function renderRows(list) {
     node.classList.toggle('completed', match.status === 'completed');
     node.querySelector('.match-meta').innerHTML = metaBadges(match, players);
     const dates = formatDate(match.utcDateTime);
-    node.querySelector('.date-cell').innerHTML = `<div>${dates.main}</div><div class="small">UK: ${dates.uk}</div><div class="small">US East: ${dates.usEast}</div>`;
+    node.querySelector('.date-cell').innerHTML = `<div>${dates.main}</div>`;
     node.querySelector('.fixture-cell').innerHTML = `${fixtureHtml(match)}${playersHtml(players)}`;
     node.querySelector('.venue-cell').textContent = match.venue;
     node.querySelector('.broadcast-us').innerHTML = broadcastHtml(match, 'US');
@@ -176,7 +180,7 @@ function renderCards(list) {
     node.querySelector('.card-meta').innerHTML = `<span>#${match.matchNumber}</span><span>${escapeHtml(match.stage)}</span>`;
     node.querySelector('.card-status').textContent = match.status;
     node.querySelector('.card-fixture').innerHTML = fixtureHtml(match);
-    node.querySelector('.card-time').innerHTML = `<strong>${dates.main}</strong><span>UK ${dates.uk} · US East ${dates.usEast}</span>`;
+    node.querySelector('.card-time').innerHTML = `<strong>${dates.main}</strong>`;
     node.querySelector('.card-venue').textContent = match.venue;
     node.querySelector('.card-players').innerHTML = playersHtml(players);
     node.querySelector('.card-us').innerHTML = broadcastHtml(match, 'US');
@@ -197,6 +201,31 @@ function friendlyWatchHtml(match) {
   const tv = match.tv?.US ? `<div><strong>US TV:</strong> ${escapeHtml(match.tv.US)}</div>` : '<div class="small">US TV: not listed yet</div>';
   const stream = match.streaming?.US ? `<div><strong>US stream:</strong> ${escapeHtml(match.streaming.US)}</div>` : '<div class="small">US stream: not listed yet</div>';
   return `${tv}${stream}`;
+}
+
+function toTwelveHour(hour, minute) {
+  const suffix = hour >= 12 ? 'PM' : 'AM';
+  const displayHour = hour % 12 || 12;
+  return `${displayHour}:${String(minute).padStart(2, '0')} ${suffix}`;
+}
+
+function formatFriendlyTimeWat(match) {
+  if (!match.time || /TBD/i.test(match.time)) return 'TBD WAT (GMT+1)';
+
+  const etMatch = match.time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*ET/i);
+  if (etMatch) {
+    let hour = Number(etMatch[1]) % 12;
+    if (etMatch[3].toUpperCase() === 'PM') hour += 12;
+    const minute = Number(etMatch[2]);
+    return `${toTwelveHour((hour + 5) % 24, minute)} WAT (GMT+1)`;
+  }
+
+  const bstMatch = match.time.match(/(\d{1,2}):(\d{2})\s*BST/i);
+  if (bstMatch) {
+    return `${toTwelveHour(Number(bstMatch[1]), Number(bstMatch[2]))} WAT (GMT+1)`;
+  }
+
+  return `${match.time} WAT (GMT+1)`;
 }
 
 function friendlyText(match) {
@@ -230,7 +259,7 @@ function renderFriendlies() {
   cards.innerHTML = list.map(match => `
     <article class="friendly-card">
       <div class="card-topline">
-        <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(match.time || 'TBD')}</span></div>
+        <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(formatFriendlyTimeWat(match))}</span></div>
       </div>
       <div class="card-fixture">${fixtureHtml(match)}</div>
       <div class="card-venue">${escapeHtml(match.venue)}</div>

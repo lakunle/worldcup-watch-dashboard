@@ -118,3 +118,12 @@ test('search also filters preparation friendlies so England v New Zealand is eas
   assert.match(js, /function filteredFriendlies/, 'friendlies should have their own filtered list');
   assert.match(js, /renderFriendlies\(\);/, 'search input should re-render friendlies as well as World Cup matches');
 });
+
+test('match and friendly times are displayed in West African Time', () => {
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(js, /timeZone: 'Africa\/Lagos'/, 'World Cup fixtures should be formatted in WAT');
+  assert.match(js, /WAT/, 'UI should label displayed times as WAT');
+  assert.match(js, /function formatFriendlyTimeWat/, 'friendlies should convert listed ET or BST times to WAT');
+  assert.doesNotMatch(js, /US East:/, 'match cards should not prioritize US Eastern time');
+});
