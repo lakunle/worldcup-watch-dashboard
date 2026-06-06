@@ -133,6 +133,15 @@ test('played friendlies expose scores and highlight links when verified', () => 
   assert.match(js, /Watch highlights/, 'friendlies should include highlight links in the card UI');
 });
 
+test('friendly score panels keep scores readable in light and dark themes', () => {
+  const css = fs.readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+
+  assert.match(css, /\.friendly-result\s*\{[^}]*color:\s*var\(--ink\)/s, 'score panels should set readable foreground text');
+  assert.doesNotMatch(css, /\.friendly-result\s*\{[^}]*background:\s*var\(--hero-card\)/s, 'light theme score panels must not use the dark hero background');
+  assert.match(css, /\.friendly-result \.match-title\s*\{[^}]*color:\s*var\(--ink\)/s, 'full-time scores should explicitly use readable text');
+  assert.match(css, /\[data-theme="dark"\] \.friendly-result\s*\{[^}]*color:\s*var\(--ink\)/s, 'dark theme score panels should also set readable foreground text');
+});
+
 test('search also filters preparation friendlies so England v New Zealand is easy to find', () => {
   const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
 
