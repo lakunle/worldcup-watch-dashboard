@@ -199,10 +199,35 @@ function friendlyWatchHtml(match) {
   return `${tv}${stream}`;
 }
 
+function friendlyText(match) {
+  return [
+    match.id,
+    match.date,
+    match.time,
+    match.homeTeam,
+    match.awayTeam,
+    match.venue,
+    match.tv?.US,
+    match.streaming?.US,
+    match.statusNote,
+  ].join(' ').toLowerCase();
+}
+
+function filteredFriendlies() {
+  if (!state.search) return friendlies;
+  const query = state.search.toLowerCase();
+  return friendlies.filter(match => friendlyText(match).includes(query));
+}
+
 function renderFriendlies() {
   const cards = $('friendlyCards');
-  $('friendlyCount').textContent = `${friendlies.length} listed`;
-  cards.innerHTML = friendlies.map(match => `
+  const list = filteredFriendlies();
+  $('friendlyCount').textContent = list.length === friendlies.length ? `${friendlies.length} listed` : `${list.length} of ${friendlies.length} listed`;
+  if (!list.length) {
+    cards.innerHTML = '<div class="empty card-empty">No friendlies match this search.</div>';
+    return;
+  }
+  cards.innerHTML = list.map(match => `
     <article class="friendly-card">
       <div class="card-topline">
         <div class="card-meta"><span>${escapeHtml(match.date)}</span><span>${escapeHtml(match.time || 'TBD')}</span></div>
@@ -248,7 +273,7 @@ function render() {
 
 $('themeToggle').addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('filterToggle').addEventListener('click', toggleFilters);
-$('search').addEventListener('input', e => { state.search = e.target.value; renderMatches(); });
+$('search').addEventListener('input', e => { state.search = e.target.value; renderFriendlies(); renderMatches(); });
 $('stageFilter').addEventListener('change', e => { state.stage = e.target.value; renderMatches(); });
 $('statusFilter').addEventListener('change', e => { state.status = e.target.value; renderMatches(); });
 $('continentFilter').addEventListener('change', e => { state.continent = e.target.value; renderMatches(); });

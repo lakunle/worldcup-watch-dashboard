@@ -110,3 +110,11 @@ test('friendly matches are available for the preparation section', () => {
     assert.ok(m.sourceUrl, `sourceUrl missing for ${m.id}`);
   }
 });
+
+test('search also filters preparation friendlies so England v New Zealand is easy to find', () => {
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(js, /function friendlyText/, 'friendlies should expose searchable text');
+  assert.match(js, /function filteredFriendlies/, 'friendlies should have their own filtered list');
+  assert.match(js, /renderFriendlies\(\);/, 'search input should re-render friendlies as well as World Cup matches');
+});
