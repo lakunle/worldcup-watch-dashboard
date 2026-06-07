@@ -621,7 +621,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874169/lesotho-kenya",
     "espnGameId": "401874169",
-    "lastScoreVerified": "2026-06-07T15:06:16Z",
+    "lastScoreVerified": "2026-06-07T15:38:18Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -643,7 +643,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871527/cyprus-liechtenstein",
     "espnGameId": "401871527",
-    "lastScoreVerified": "2026-06-07T15:06:16Z",
+    "lastScoreVerified": "2026-06-07T15:38:18Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -720,6 +720,50 @@
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870630/italy-greece",
     "espnGameId": "401870630",
     "lastScoreVerified": "2026-06-07T01:40:45Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260607-ESPN-401874916",
+    "date": "Sunday, June 7, 2026",
+    "time": "7:00 AM ET",
+    "homeTeam": "Afghanistan",
+    "awayTeam": "Pakistan",
+    "venue": "National Stadium (Maldives)",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874916/pakistan-afghanistan",
+    "espnGameId": "401874916",
+    "lastScoreVerified": "2026-06-07T15:38:18Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260607-ESPN-401874917",
+    "date": "Sunday, June 7, 2026",
+    "time": "9:00 AM ET",
+    "homeTeam": "Oman",
+    "awayTeam": "Mozambique",
+    "venue": "Patriot Candrabaga Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 4,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874917/mozambique-oman",
+    "espnGameId": "401874917",
+    "lastScoreVerified": "2026-06-07T15:38:18Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   }
