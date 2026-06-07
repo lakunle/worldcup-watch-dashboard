@@ -449,16 +449,16 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "62'",
+    "status": "completed",
+    "statusDetail": "FT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401866598/norway-morocco",
     "espnGameId": "401866598",
-    "lastScoreVerified": "2026-06-07T20:32:22Z",
+    "lastScoreVerified": "2026-06-07T21:05:05Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
       "home": 1,
-      "away": 0
+      "away": 1
     }
   },
   {
@@ -472,14 +472,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "16'",
+    "statusDetail": "HT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870000/guatemala-ecuador",
     "espnGameId": "401870000",
-    "lastScoreVerified": "2026-06-07T20:32:22Z",
+    "lastScoreVerified": "2026-06-07T21:05:05Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     }
   },
@@ -709,15 +709,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "86'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 1
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401856623/slovenia-croatia",
     "espnGameId": "401856623",
-    "lastScoreVerified": "2026-06-07T20:32:22Z",
+    "lastScoreVerified": "2026-06-07T21:05:05Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -731,15 +731,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "69'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
       "home": 0,
       "away": 1
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870630/italy-greece",
     "espnGameId": "401870630",
-    "lastScoreVerified": "2026-06-07T20:32:22Z",
+    "lastScoreVerified": "2026-06-07T21:05:05Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
