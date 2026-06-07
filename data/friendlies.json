@@ -621,7 +621,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874169/lesotho-kenya",
     "espnGameId": "401874169",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -643,7 +643,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871527/cyprus-liechtenstein",
     "espnGameId": "401871527",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -665,7 +665,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871170/ukraine-denmark",
     "espnGameId": "401871170",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -680,14 +680,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "20'",
+    "statusDetail": "HT",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401872604/andorra-kosovo",
     "espnGameId": "401872604",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -701,12 +701,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Sun, June 7th at 2:45 PM EDT",
-    "score": null,
+    "status": "live",
+    "statusDetail": "7'",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401856623/slovenia-croatia",
     "espnGameId": "401856623",
-    "lastScoreVerified": "2026-06-07T01:40:45Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -747,7 +750,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874916/pakistan-afghanistan",
     "espnGameId": "401874916",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -769,7 +772,7 @@
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874917/mozambique-oman",
     "espnGameId": "401874917",
-    "lastScoreVerified": "2026-06-07T18:21:08Z",
+    "lastScoreVerified": "2026-06-07T18:52:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   }
