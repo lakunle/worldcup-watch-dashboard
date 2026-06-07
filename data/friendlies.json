@@ -613,15 +613,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "72'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
-      "home": 2,
+      "home": 4,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874169/lesotho-kenya",
     "espnGameId": "401874169",
-    "lastScoreVerified": "2026-06-07T14:33:58Z",
+    "lastScoreVerified": "2026-06-07T15:06:16Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -635,15 +635,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "75'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
       "home": 0,
       "away": 2
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871527/cyprus-liechtenstein",
     "espnGameId": "401871527",
-    "lastScoreVerified": "2026-06-07T14:33:58Z",
+    "lastScoreVerified": "2026-06-07T15:06:16Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
