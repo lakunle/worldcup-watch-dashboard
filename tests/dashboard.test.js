@@ -158,3 +158,33 @@ test('match and friendly times are displayed in West African Time', () => {
   assert.match(js, /function formatFriendlyTimeWat/, 'friendlies should convert listed ET or BST times to WAT');
   assert.doesNotMatch(js, /US East:/, 'match cards should not prioritize US Eastern time');
 });
+
+test('played and upcoming filters apply to both tournament and warm-up matches', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(html, /<option value="upcoming">Upcoming<\/option>/, 'status filter should expose an upcoming option');
+  assert.match(html, /<option value="played">Played<\/option>/, 'status filter should expose a played option');
+  assert.match(js, /function isPlayedMatch/, 'shared played-match predicate should exist');
+  assert.match(js, /function isUpcomingMatch/, 'shared upcoming-match predicate should exist');
+  assert.match(js, /filteredFriendlies[\s\S]*state\.status/, 'warm-up matches should respect the status filter');
+});
+
+test('tournament and warm-up match lists sort by closest date/time first', () => {
+  const js = fs.readFileSync(new URL('../app.js', import.meta.url), 'utf8');
+
+  assert.match(js, /function matchTimestamp/, 'matches should expose comparable timestamps');
+  assert.match(js, /function sortClosestMatches/, 'matches should share a closest-first sorter');
+  assert.match(js, /filteredMatches[\s\S]*sortClosestMatches/, 'World Cup fixtures should use closest-first date sorting');
+  assert.match(js, /filteredFriendlies[\s\S]*sortClosestMatches/, 'warm-up fixtures should use closest-first date sorting');
+  assert.doesNotMatch(js, /sort\(\(a, b\) => collator\.compare\(a\.id, b\.id\)\)/, 'World Cup fixtures should no longer sort by fixture id');
+});
+
+test('the app uses the 2026 FIFA World Cup logo as its brand mark', () => {
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+
+  assert.match(html, /2026_FIFA_World_Cup_emblem\.svg/, 'header should load the 2026 FIFA World Cup emblem');
+  assert.match(html, /alt="2026 FIFA World Cup logo"/, 'logo image should have accessible alt text');
+  assert.match(css, /\.brand-logo/, 'official logo should have dedicated sizing styles');
+});

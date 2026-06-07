@@ -14,7 +14,6 @@ const state = {
 };
 
 const $ = (id) => document.getElementById(id);
-const collator = new Intl.Collator(undefined, { numeric: true });
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]));
@@ -72,14 +71,14 @@ function toggleFilters() {
   toggle.setAttribute('aria-expanded', String(isOpening));
 }
 
-function updateFilterSummary(count) {
+function updateFilterSummary(matchCount, friendlyCount) {
   const parts = [];
   if (state.search) parts.push(`“${state.search}”`);
   if (state.stage !== 'all') parts.push(state.stage.replace(' stage', ''));
-  if (state.status !== 'all') parts.push(state.status);
+  if (state.status !== 'all') parts.push(state.status === 'played' ? 'played' : 'upcoming');
   if (state.continent !== 'all') parts.push(state.continent === 'Africa' ? 'Africa' : state.continent);
   if (state.unitedOnly) parts.push('United');
-  $('filterSummary').textContent = `${count} matches${parts.length ? ' · ' + parts.join(' · ') : ''}`;
+  $('filterSummary').textContent = `${matchCount} World Cup · ${friendlyCount} warm-ups${parts.length ? ' · ' + parts.join(' · ') : ''}`;
 }
 
 function formatDate(iso) {
@@ -93,6 +92,64 @@ function formatDate(iso) {
     timeZone: 'Africa/Lagos',
   }).format(d);
   return { main: `${wat} WAT (GMT+1)` };
+}
+
+function parseFriendlyTimestamp(match) {
+  if (!match.date || !match.time || /TBD/i.test(match.time)) return Number.POSITIVE_INFINITY;
+
+  const datePart = match.date.replace(/^\w+,\s*/, '');
+  const etMatch = match.time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*ET/i);
+  if (etMatch) {
+    const [, rawHour, rawMinute, meridiem] = etMatch;
+    let hour = Number(rawHour) % 12;
+    if (meridiem.toUpperCase() === 'PM') hour += 12;
+    return new Date(`${datePart} ${String(hour).padStart(2, '0')}:${rawMinute}:00 GMT-0400`).getTime();
+  }
+
+  const bstMatch = match.time.match(/(\d{1,2}):(\d{2})\s*BST/i);
+  if (bstMatch) {
+    return new Date(`${datePart} ${String(Number(bstMatch[1])).padStart(2, '0')}:${bstMatch[2]}:00 GMT+0100`).getTime();
+  }
+
+  const fallback = new Date(`${datePart} ${match.time}`).getTime();
+  return Number.isNaN(fallback) ? Number.POSITIVE_INFINITY : fallback;
+}
+
+function matchTimestamp(match) {
+  if (match.utcDateTime) return new Date(match.utcDateTime).getTime();
+  return parseFriendlyTimestamp(match);
+}
+
+function isPlayedMatch(match) {
+  return match.status === 'completed' || match.statusDetail === 'FT';
+}
+
+function isUpcomingMatch(match) {
+  const timestamp = matchTimestamp(match);
+  return !isPlayedMatch(match) && match.status !== 'cancelled' && timestamp >= Date.now();
+}
+
+function passesStatusFilter(match) {
+  if (state.status === 'played') return isPlayedMatch(match);
+  if (state.status === 'upcoming') return isUpcomingMatch(match);
+  return true;
+}
+
+function sortClosestMatches(list) {
+  const now = Date.now();
+  return [...list].sort((a, b) => {
+    const aTime = matchTimestamp(a);
+    const bTime = matchTimestamp(b);
+    if (!Number.isFinite(aTime) && !Number.isFinite(bTime)) return 0;
+    if (!Number.isFinite(aTime)) return 1;
+    if (!Number.isFinite(bTime)) return -1;
+
+    if (state.status === 'played') return bTime - aTime;
+    if (state.status === 'upcoming') return aTime - bTime;
+
+    const distance = Math.abs(aTime - now) - Math.abs(bTime - now);
+    return distance || aTime - bTime;
+  });
 }
 
 function resultHtml(match) {
@@ -109,14 +166,15 @@ function matchText(match) {
 }
 
 function filteredMatches() {
-  return matches.filter(match => {
+  const list = matches.filter(match => {
     if (state.stage !== 'all' && match.stage !== state.stage) return false;
-    if (state.status !== 'all' && match.status !== state.status) return false;
+    if (!passesStatusFilter(match)) return false;
     if (!hasContinentInterest(match)) return false;
     if (state.unitedOnly && !hasUnitedInterest(match)) return false;
     if (state.search && !matchText(match).includes(state.search.toLowerCase())) return false;
     return true;
-  }).sort((a, b) => collator.compare(a.id, b.id));
+  });
+  return sortClosestMatches(list);
 }
 
 function metaBadges(match, players) {
@@ -192,7 +250,7 @@ function renderCards(list) {
 
 function renderMatches() {
   const list = filteredMatches();
-  updateFilterSummary(list.length);
+  updateFilterSummary(list.length, filteredFriendlies().length);
   renderRows(list);
   renderCards(list);
 }
@@ -268,9 +326,13 @@ function friendlyText(match) {
 }
 
 function filteredFriendlies() {
-  if (!state.search) return friendlies;
   const query = state.search.toLowerCase();
-  return friendlies.filter(match => friendlyText(match).includes(query));
+  const list = friendlies.filter(match => {
+    if (!passesStatusFilter(match)) return false;
+    if (query && !friendlyText(match).includes(query)) return false;
+    return true;
+  });
+  return sortClosestMatches(list);
 }
 
 function renderFriendlies() {
@@ -330,7 +392,7 @@ $('themeToggle').addEventListener('click', () => setTheme(document.documentEleme
 $('filterToggle').addEventListener('click', toggleFilters);
 $('search').addEventListener('input', e => { state.search = e.target.value; renderFriendlies(); renderMatches(); });
 $('stageFilter').addEventListener('change', e => { state.stage = e.target.value; renderMatches(); });
-$('statusFilter').addEventListener('change', e => { state.status = e.target.value; renderMatches(); });
+$('statusFilter').addEventListener('change', e => { state.status = e.target.value; renderFriendlies(); renderMatches(); });
 $('continentFilter').addEventListener('change', e => { state.continent = e.target.value; renderMatches(); });
 $('unitedOnly').addEventListener('change', e => { state.unitedOnly = e.target.checked; renderMatches(); });
 

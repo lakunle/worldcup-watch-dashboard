@@ -7,12 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202606062241" />
+  <link rel="stylesheet" href="styles.css?v=202606070535" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="World Cup Watch Dashboard home">
-      <span class="brand-mark">⚽</span>
+      <span class="brand-mark"><img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/120px-2026_FIFA_World_Cup_emblem.svg.png" alt="2026 FIFA World Cup logo" /></span>
       <span>Watch 26</span>
     </a>
     <div class="header-actions">
@@ -52,8 +52,8 @@
           </select>
           <select id="statusFilter" aria-label="Status filter">
             <option value="all">All statuses</option>
-            <option value="scheduled">Scheduled</option>
-            <option value="completed">Completed</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="played">Played</option>
           </select>
           <select id="continentFilter" aria-label="Country region filter">
             <option value="all">All countries</option>
@@ -131,6 +131,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=202606062241" type="module"></script>
+  <script src="app.js?v=202606070535" type="module"></script>
 </body>
 </html>

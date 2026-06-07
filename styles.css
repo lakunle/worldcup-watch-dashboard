@@ -71,8 +71,9 @@ body {
   box-shadow: 0 8px 28px rgba(22,22,22,.08);
 }
 
-.brand { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
-.brand-mark { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--charcoal); color: #fff; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+.brand-mark { width: 2.2rem; height: 2.2rem; display: grid; place-items: center; border-radius: 50%; background: #111; color: #fff; overflow: hidden; border: 1px solid rgba(255,255,255,.32); }
+.brand-logo { width: 100%; height: 100%; object-fit: contain; display: block; padding: .12rem; background: #111; }
 .header-actions { display: inline-flex; align-items: center; gap: .5rem; }
 .icon-button { width: 2.25rem; height: 2.25rem; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
 .header-pill { font-size: .78rem; font-weight: 700; color: var(--muted); padding: .45rem .7rem; border-radius: 999px; background: var(--soft); }
