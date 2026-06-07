@@ -472,10 +472,10 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "HT",
+    "statusDetail": "60'",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870000/guatemala-ecuador",
     "espnGameId": "401870000",
-    "lastScoreVerified": "2026-06-07T21:05:05Z",
+    "lastScoreVerified": "2026-06-07T21:37:53Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
