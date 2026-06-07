@@ -406,14 +406,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "29'",
+    "statusDetail": "HT",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401868047/honduras-argentina",
     "espnGameId": "401868047",
-    "lastScoreVerified": "2026-06-07T00:36:30Z",
+    "lastScoreVerified": "2026-06-07T01:08:36Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
