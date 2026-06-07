@@ -453,9 +453,9 @@
     "statusDetail": "FT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401866598/norway-morocco",
     "espnGameId": "401866598",
-    "lastScoreVerified": "2026-06-07T21:05:05Z",
-    "highlightsUrl": null,
-    "highlightsLabel": null,
+    "lastScoreVerified": "2026-06-07T22:09:31Z",
+    "highlightsUrl": "https://www.youtube.com/watch?v=lyuBo3S0zZQ",
+    "highlightsLabel": "ESPN FC official highlights on YouTube",
     "score": {
       "home": 1,
       "away": 1
@@ -471,15 +471,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "60'",
+    "status": "completed",
+    "statusDetail": "FT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870000/guatemala-ecuador",
     "espnGameId": "401870000",
-    "lastScoreVerified": "2026-06-07T21:37:53Z",
+    "lastScoreVerified": "2026-06-07T22:09:31Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
-      "home": 1,
+      "home": 3,
       "away": 0
     }
   },
