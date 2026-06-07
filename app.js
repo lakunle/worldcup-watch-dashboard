@@ -1,8 +1,8 @@
 const [matches, unitedPlayers, teams, friendlies] = await Promise.all([
-  fetch('./data/matches.json?v=202606062241').then(r => r.json()),
-  fetch('./data/man-utd-players.json?v=202606062241').then(r => r.json()),
-  fetch('./data/teams.json?v=202606062241').then(r => r.json()),
-  fetch('./data/friendlies.json?v=202606062241').then(r => r.json()),
+  fetch('./data/matches.json?v=202606070245').then(r => r.json()),
+  fetch('./data/man-utd-players.json?v=202606070245').then(r => r.json()),
+  fetch('./data/teams.json?v=202606070245').then(r => r.json()),
+  fetch('./data/friendlies.json?v=202606070245').then(r => r.json()),
 ]);
 
 const state = {
