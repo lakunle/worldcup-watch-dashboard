@@ -450,10 +450,10 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "23'",
+    "statusDetail": "HT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401866598/norway-morocco",
     "espnGameId": "401866598",
-    "lastScoreVerified": "2026-06-07T19:26:58Z",
+    "lastScoreVerified": "2026-06-07T19:59:02Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
@@ -683,15 +683,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "69'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
-      "home": 2,
+      "home": 3,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401872604/andorra-kosovo",
     "espnGameId": "401872604",
-    "lastScoreVerified": "2026-06-07T19:26:58Z",
+    "lastScoreVerified": "2026-06-07T19:59:02Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -706,14 +706,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "40'",
+    "statusDetail": "54'",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401856623/slovenia-croatia",
     "espnGameId": "401856623",
-    "lastScoreVerified": "2026-06-07T19:26:58Z",
+    "lastScoreVerified": "2026-06-07T19:59:58Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -728,14 +728,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "24'",
+    "statusDetail": "HT",
     "score": {
       "home": 0,
       "away": 1
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870630/italy-greece",
     "espnGameId": "401870630",
-    "lastScoreVerified": "2026-06-07T19:26:58Z",
+    "lastScoreVerified": "2026-06-07T19:59:02Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
