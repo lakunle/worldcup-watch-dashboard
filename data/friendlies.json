@@ -493,13 +493,17 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Sun, June 7th at 7:00 PM EDT",
+    "status": "live",
+    "statusDetail": "9'",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401862320/jordan-colombia",
     "espnGameId": "401862320",
-    "lastScoreVerified": "2026-06-07T01:40:45Z",
+    "lastScoreVerified": "2026-06-07T23:15:33Z",
     "highlightsUrl": null,
-    "highlightsLabel": null
+    "highlightsLabel": null,
+    "score": {
+      "home": 0,
+      "away": 0
+    }
   },
   {
     "id": "F20260608-001",
