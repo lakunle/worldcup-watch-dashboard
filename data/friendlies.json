@@ -658,14 +658,14 @@
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "live",
-    "statusDetail": "44'",
+    "statusDetail": "60'",
     "score": {
       "home": 2,
-      "away": 0
+      "away": 1
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871170/ukraine-denmark",
     "espnGameId": "401871170",
-    "lastScoreVerified": "2026-06-07T17:15:11Z",
+    "lastScoreVerified": "2026-06-07T17:48:44Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
