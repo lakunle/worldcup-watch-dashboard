@@ -361,15 +361,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "90'+3'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
       "home": 2,
       "away": 1
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861998",
     "espnGameId": "401861998",
-    "lastScoreVerified": "2026-06-07T00:03:39Z",
+    "lastScoreVerified": "2026-06-07T00:36:03Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -405,12 +405,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Sat, June 6th at 8:00 PM EDT",
-    "score": null,
+    "status": "live",
+    "statusDetail": "29'",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401868047/honduras-argentina",
     "espnGameId": "401868047",
-    "lastScoreVerified": "2026-06-06T23:30:18Z",
+    "lastScoreVerified": "2026-06-07T00:36:30Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
