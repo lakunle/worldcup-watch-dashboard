@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202606071215" />
+  <link rel="stylesheet" href="styles.css?v=202606071330" />
 </head>
 <body>
   <header class="site-header">
@@ -23,14 +23,22 @@
 
   <main id="top">
     <section class="hero">
-      <div>
+      <div class="hero-copy">
         <p class="kicker">2026 fixture command centre</p>
         <h1>Match times, broadcasts and results without the hunt.</h1>
         <p class="sub">Tournament and warm-up matches are filtered together, sorted by the closest date and time, with WAT times, African-team views, United-interest alerts and verified watching notes.</p>
+        <div class="hero-utility" aria-label="Dashboard strengths">
+          <span>Played / upcoming filters</span>
+          <span>Warm-ups included</span>
+          <span>WAT first</span>
+        </div>
       </div>
-      <div class="hero-card">
-        <div id="nextUnitedLabel" class="label">Next United-interest match</div>
-        <div id="nextUnitedMatch" class="next-match">Loading…</div>
+      <div class="hero-panel">
+        <div class="panel-code">WC26</div>
+        <div class="hero-card">
+          <div id="nextUnitedLabel" class="label">Next United-interest match</div>
+          <div id="nextUnitedMatch" class="next-match">Loading…</div>
+        </div>
       </div>
     </section>
 
@@ -131,6 +139,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=202606071215" type="module"></script>
+  <script src="app.js?v=202606071330" type="module"></script>
 </body>
 </html>
