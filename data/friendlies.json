@@ -405,15 +405,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "70'",
+    "status": "completed",
+    "statusDetail": "FT",
     "score": {
       "home": 2,
       "away": 0
     },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401868047/honduras-argentina",
     "espnGameId": "401868047",
-    "lastScoreVerified": "2026-06-07T01:40:45Z",
+    "lastScoreVerified": "2026-06-07T02:13:45Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -427,12 +427,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Sat, June 6th at 8:00 PM EDT",
-    "score": null,
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 4,
+      "away": 0
+    },
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873741/aruba-curacao",
     "espnGameId": "401873741",
-    "lastScoreVerified": "2026-06-07T01:40:45Z",
+    "lastScoreVerified": "2026-06-07T02:13:45Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
