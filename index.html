@@ -6,27 +6,27 @@
   <title>World Cup 2026 Watch Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=202606070535" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=202606071215" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="World Cup Watch Dashboard home">
       <span class="brand-mark"><img class="brand-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/120px-2026_FIFA_World_Cup_emblem.svg.png" alt="2026 FIFA World Cup logo" /></span>
-      <span>Watch 26</span>
+      <span>World Cup Watch</span>
     </a>
     <div class="header-actions">
       <button id="themeToggle" class="icon-button" type="button" aria-label="Switch to dark mode">🌙</button>
-      <span class="header-pill">Mobile-first fixture tracker</span>
+      <span class="header-pill">Closest fixtures first</span>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
       <div>
-        <p class="eyebrow">World Cup 2026</p>
-        <h1>Find the match, channel and stream fast.</h1>
-        <p class="sub">A cleaner mobile-first dashboard for fixtures, African teams, Manchester United-player alerts, broadcast notes, scores and highlights.</p>
+        <p class="kicker">2026 fixture command centre</p>
+        <h1>Match times, broadcasts and results without the hunt.</h1>
+        <p class="sub">Tournament and warm-up matches are filtered together, sorted by the closest date and time, with WAT times, African-team views, United-interest alerts and verified watching notes.</p>
       </div>
       <div class="hero-card">
         <div id="nextUnitedLabel" class="label">Next United-interest match</div>
@@ -73,8 +73,8 @@
     <section class="friendly-section" aria-label="World Cup preparation friendlies">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Preparation friendlies</p>
-          <h2>Warm-up matches happening now</h2>
+          <p class="kicker">Warm-up schedule</p>
+          <h2>Friendlies and tune-ups, closest first</h2>
         </div>
         <span id="friendlyCount" class="section-pill">Loading…</span>
       </div>
@@ -131,6 +131,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=202606070535" type="module"></script>
+  <script src="app.js?v=202606071215" type="module"></script>
 </body>
 </html>
