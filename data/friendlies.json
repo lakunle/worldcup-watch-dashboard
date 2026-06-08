@@ -326,8 +326,8 @@
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401860828/new-zealand-england",
     "espnGameId": "401860828",
     "lastScoreVerified": "2026-06-07T01:40:45Z",
-    "highlightsUrl": null,
-    "highlightsLabel": null
+    "highlightsUrl": "https://www.youtube.com/watch?v=QpMcpu-JB-c",
+    "highlightsLabel": "England official highlights on YouTube"
   },
   {
     "id": "F20260606-016",
@@ -498,8 +498,8 @@
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401862320/jordan-colombia",
     "espnGameId": "401862320",
     "lastScoreVerified": "2026-06-08T00:59:27Z",
-    "highlightsUrl": null,
-    "highlightsLabel": null,
+    "highlightsUrl": "https://www.youtube.com/watch?v=0CNPek1qhcc",
+    "highlightsLabel": "ESPN FC official highlights on YouTube",
     "score": {
       "home": 2,
       "away": 0
@@ -514,7 +514,11 @@
     "venue": "Icahn Stadium, New York City, New York",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly"
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "scheduled",
+    "statusDetail": "Scheduled",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871814/uzbekistan-netherlands",
+    "espnGameId": "401871814"
   },
   {
     "id": "F20260608-002",
@@ -525,7 +529,11 @@
     "venue": "Decathlon Arena - Stade Pierre-Mauroy, Lille, France",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly"
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "scheduled",
+    "statusDetail": "Scheduled",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401869804/northern-ireland-france",
+    "espnGameId": "401869804"
   },
   {
     "id": "F20260609-001",
@@ -788,6 +796,24 @@
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874917/mozambique-oman",
     "espnGameId": "401874917",
     "lastScoreVerified": "2026-06-07T23:48:05Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260608-ESPN-401867679",
+    "date": "Monday, June 8, 2026",
+    "time": "10:00 PM ET",
+    "homeTeam": "Peru",
+    "awayTeam": "Spain",
+    "venue": "Venue not listed",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "scheduled",
+    "statusDetail": "Scheduled",
+    "score": null,
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401867679/spain-peru",
+    "espnGameId": "401867679",
     "highlightsUrl": null,
     "highlightsLabel": null
   }
