@@ -493,15 +493,15 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "live",
-    "statusDetail": "54'",
+    "status": "completed",
+    "statusDetail": "FT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401862320/jordan-colombia",
     "espnGameId": "401862320",
-    "lastScoreVerified": "2026-06-08T00:21:05Z",
+    "lastScoreVerified": "2026-06-08T00:59:27Z",
     "highlightsUrl": null,
     "highlightsLabel": null,
     "score": {
-      "home": 1,
+      "home": 2,
       "away": 0
     }
   },
