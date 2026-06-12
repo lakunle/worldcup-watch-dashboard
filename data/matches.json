@@ -34,7 +34,7 @@
         "saves": "2"
       }
     },
-    "highlightsUrl": "",
+    "highlightsUrl": "https://www.youtube.com/watch?v=O3botizsrUU",
     "broadcast": {
       "US": "FOX",
       "UK": "TBD per match — expected rights holders: BBC / ITV split",
@@ -51,7 +51,8 @@
       "scoreSource": "ESPN FIFA World Cup match centre",
       "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760415",
       "lastScoreVerified": "2026-06-12T19:55:16Z"
-    }
+    },
+    "highlightsLabel": "FIFA official highlights on YouTube"
   },
   {
     "id": "M002",
@@ -88,7 +89,7 @@
         "saves": "4"
       }
     },
-    "highlightsUrl": "",
+    "highlightsUrl": "https://www.youtube.com/watch?v=-TN1sbsOaPk",
     "broadcast": {
       "US": "FS1",
       "UK": "TBD per match — expected rights holders: BBC / ITV split",
@@ -105,7 +106,8 @@
       "scoreSource": "ESPN FIFA World Cup match centre",
       "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760414",
       "lastScoreVerified": "2026-06-12T19:55:16Z"
-    }
+    },
+    "highlightsLabel": "FIFA official goal highlight on YouTube"
   },
   {
     "id": "M003",
@@ -122,24 +124,24 @@
     },
     "stats": {
       "Canada": {
-        "possessionPct": "65.8",
-        "totalShots": "7",
-        "shotsOnTarget": "1",
-        "wonCorners": "9",
-        "foulsCommitted": "4",
-        "yellowCards": "1",
-        "redCards": "0",
-        "saves": "1"
-      },
-      "Bosnia-Herzegovina": {
-        "possessionPct": "34.2",
-        "totalShots": "5",
-        "shotsOnTarget": "2",
-        "wonCorners": "1",
-        "foulsCommitted": "8",
+        "foulsCommitted": "7",
         "yellowCards": "2",
         "redCards": "0",
-        "saves": "1"
+        "wonCorners": "9",
+        "saves": "2",
+        "possessionPct": "63.5",
+        "totalShots": "11",
+        "shotsOnTarget": "3"
+      },
+      "Bosnia-Herzegovina": {
+        "foulsCommitted": "13",
+        "yellowCards": "2",
+        "redCards": "0",
+        "wonCorners": "3",
+        "saves": "1",
+        "possessionPct": "36.5",
+        "totalShots": "7",
+        "shotsOnTarget": "3"
       }
     },
     "highlightsUrl": "",
@@ -151,14 +153,14 @@
       "lastVerified": "2026-06-07 — US TV verified from FOX Sports schedule: https://www.foxsports.com/soccer/fifa-world-cup-men/schedule and https://www.foxsports.com/soccer/fifa-world-cup-men-canada-vs-bosnia-and-herzegovina-jun-12-2026-game-boxscore-647618; UK BBC/ITV exact per-match allocation not found on official BBC/ITV sources checked."
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
-    "statusDetail": "HT",
+    "statusDetail": "68'",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
     "espnGameId": "760416",
-    "lastScoreVerified": "2026-06-12T19:55:16Z",
+    "lastScoreVerified": "2026-06-12T20:30:07Z",
     "sourceVerification": {
       "scoreSource": "ESPN FIFA World Cup match centre",
       "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
-      "lastScoreVerified": "2026-06-12T19:55:16Z"
+      "lastScoreVerified": "2026-06-12T20:30:07Z"
     }
   },
   {

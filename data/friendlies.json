@@ -957,13 +957,10 @@
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "cancelled",
     "statusDetail": "Canceled",
-    "score": {
-      "home": 0,
-      "away": 0
-    },
+    "score": null,
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873743",
     "espnGameId": "401873743",
-    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "lastScoreVerified": "2026-06-12T20:30:27Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -1001,13 +998,10 @@
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "cancelled",
     "statusDetail": "Canceled",
-    "score": {
-      "home": 0,
-      "away": 0
-    },
+    "score": null,
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873744",
     "espnGameId": "401873744",
-    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "lastScoreVerified": "2026-06-12T20:30:27Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -1133,13 +1127,10 @@
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "cancelled",
     "statusDetail": "Canceled",
-    "score": {
-      "home": 0,
-      "away": 0
-    },
+    "score": null,
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874100",
     "espnGameId": "401874100",
-    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "lastScoreVerified": "2026-06-12T20:30:27Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   },
@@ -1375,13 +1366,10 @@
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
     "status": "cancelled",
     "statusDetail": "Canceled",
-    "score": {
-      "home": 0,
-      "away": 0
-    },
+    "score": null,
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401869744",
     "espnGameId": "401869744",
-    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "lastScoreVerified": "2026-06-12T20:30:27Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   }
