@@ -117,30 +117,30 @@
     "homeTeam": "Canada",
     "awayTeam": "Bosnia and Herzegovina",
     "venue": "BMO Field , Toronto",
-    "status": "live",
+    "status": "completed",
     "score": {
-      "home": 0,
+      "home": 1,
       "away": 1
     },
     "stats": {
       "Canada": {
-        "foulsCommitted": "7",
+        "foulsCommitted": "10",
         "yellowCards": "2",
         "redCards": "0",
         "wonCorners": "9",
         "saves": "2",
-        "possessionPct": "63.5",
-        "totalShots": "11",
-        "shotsOnTarget": "3"
+        "possessionPct": "60.9",
+        "totalShots": "13",
+        "shotsOnTarget": "4"
       },
       "Bosnia-Herzegovina": {
-        "foulsCommitted": "13",
-        "yellowCards": "2",
+        "foulsCommitted": "20",
+        "yellowCards": "3",
         "redCards": "0",
-        "wonCorners": "3",
+        "wonCorners": "4",
         "saves": "1",
-        "possessionPct": "36.5",
-        "totalShots": "7",
+        "possessionPct": "39.1",
+        "totalShots": "8",
         "shotsOnTarget": "3"
       }
     },
@@ -153,14 +153,14 @@
       "lastVerified": "2026-06-07 — US TV verified from FOX Sports schedule: https://www.foxsports.com/soccer/fifa-world-cup-men/schedule and https://www.foxsports.com/soccer/fifa-world-cup-men-canada-vs-bosnia-and-herzegovina-jun-12-2026-game-boxscore-647618; UK BBC/ITV exact per-match allocation not found on official BBC/ITV sources checked."
     },
     "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
-    "statusDetail": "68'",
+    "statusDetail": "FT",
     "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
     "espnGameId": "760416",
-    "lastScoreVerified": "2026-06-12T20:30:07Z",
+    "lastScoreVerified": "2026-06-12T21:02:10Z",
     "sourceVerification": {
       "scoreSource": "ESPN FIFA World Cup match centre",
       "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
-      "lastScoreVerified": "2026-06-12T20:30:07Z"
+      "lastScoreVerified": "2026-06-12T21:02:10Z"
     }
   },
   {
