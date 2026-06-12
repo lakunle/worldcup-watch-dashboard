@@ -7,9 +7,33 @@
     "homeTeam": "Mexico",
     "awayTeam": "South Africa",
     "venue": "Estadio Azteca , Mexico City",
-    "status": "scheduled",
-    "score": null,
-    "stats": null,
+    "status": "completed",
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "stats": {
+      "Mexico": {
+        "possessionPct": "60.5",
+        "totalShots": "16",
+        "shotsOnTarget": "4",
+        "wonCorners": "3",
+        "foulsCommitted": "12",
+        "yellowCards": "1",
+        "redCards": "1",
+        "saves": "2"
+      },
+      "South Africa": {
+        "possessionPct": "39.5",
+        "totalShots": "3",
+        "shotsOnTarget": "2",
+        "wonCorners": "1",
+        "foulsCommitted": "11",
+        "yellowCards": "2",
+        "redCards": "2",
+        "saves": "2"
+      }
+    },
     "highlightsUrl": "",
     "broadcast": {
       "US": "FOX",
@@ -18,7 +42,16 @@
       "streamingUK": "TBD per match — BBC iPlayer or ITVX depending on BBC/ITV allocation",
       "lastVerified": "2026-06-07 — US TV verified from FOX Sports schedule: https://www.foxsports.com/soccer/fifa-world-cup-men/schedule and https://www.foxsports.com/soccer/fifa-world-cup-men-mexico-vs-south-africa-jun-11-2026-game-boxscore-647616; UK BBC/ITV exact per-match allocation not found on official BBC/ITV sources checked."
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+    "statusDetail": "FT",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760415",
+    "espnGameId": "760415",
+    "lastScoreVerified": "2026-06-12T19:55:16Z",
+    "sourceVerification": {
+      "scoreSource": "ESPN FIFA World Cup match centre",
+      "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760415",
+      "lastScoreVerified": "2026-06-12T19:55:16Z"
+    }
   },
   {
     "id": "M002",
@@ -28,9 +61,33 @@
     "homeTeam": "South Korea",
     "awayTeam": "Czech Republic",
     "venue": "Estadio Akron , Zapopan",
-    "status": "scheduled",
-    "score": null,
-    "stats": null,
+    "status": "completed",
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "stats": {
+      "South Korea": {
+        "possessionPct": "61.5",
+        "totalShots": "15",
+        "shotsOnTarget": "6",
+        "wonCorners": "4",
+        "foulsCommitted": "9",
+        "yellowCards": "1",
+        "redCards": "0",
+        "saves": "3"
+      },
+      "Czechia": {
+        "possessionPct": "38.5",
+        "totalShots": "7",
+        "shotsOnTarget": "4",
+        "wonCorners": "5",
+        "foulsCommitted": "16",
+        "yellowCards": "0",
+        "redCards": "0",
+        "saves": "4"
+      }
+    },
     "highlightsUrl": "",
     "broadcast": {
       "US": "FS1",
@@ -39,7 +96,16 @@
       "streamingUK": "TBD per match — BBC iPlayer or ITVX depending on BBC/ITV allocation",
       "lastVerified": "2026-06-07 — US TV verified from FOX Sports schedule: https://www.foxsports.com/soccer/fifa-world-cup-men/schedule and https://www.foxsports.com/soccer/fifa-world-cup-men-south-korea-vs-czechia-jun-11-2026-game-boxscore-647617; UK BBC/ITV exact per-match allocation not found on official BBC/ITV sources checked."
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+    "statusDetail": "FT",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760414",
+    "espnGameId": "760414",
+    "lastScoreVerified": "2026-06-12T19:55:16Z",
+    "sourceVerification": {
+      "scoreSource": "ESPN FIFA World Cup match centre",
+      "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760414",
+      "lastScoreVerified": "2026-06-12T19:55:16Z"
+    }
   },
   {
     "id": "M003",
@@ -49,9 +115,33 @@
     "homeTeam": "Canada",
     "awayTeam": "Bosnia and Herzegovina",
     "venue": "BMO Field , Toronto",
-    "status": "scheduled",
-    "score": null,
-    "stats": null,
+    "status": "live",
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "Canada": {
+        "possessionPct": "65.8",
+        "totalShots": "7",
+        "shotsOnTarget": "1",
+        "wonCorners": "9",
+        "foulsCommitted": "4",
+        "yellowCards": "1",
+        "redCards": "0",
+        "saves": "1"
+      },
+      "Bosnia-Herzegovina": {
+        "possessionPct": "34.2",
+        "totalShots": "5",
+        "shotsOnTarget": "2",
+        "wonCorners": "1",
+        "foulsCommitted": "8",
+        "yellowCards": "2",
+        "redCards": "0",
+        "saves": "1"
+      }
+    },
     "highlightsUrl": "",
     "broadcast": {
       "US": "FOX",
@@ -60,7 +150,16 @@
       "streamingUK": "TBD per match — BBC iPlayer or ITVX depending on BBC/ITV allocation",
       "lastVerified": "2026-06-07 — US TV verified from FOX Sports schedule: https://www.foxsports.com/soccer/fifa-world-cup-men/schedule and https://www.foxsports.com/soccer/fifa-world-cup-men-canada-vs-bosnia-and-herzegovina-jun-12-2026-game-boxscore-647618; UK BBC/ITV exact per-match allocation not found on official BBC/ITV sources checked."
     },
-    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+    "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+    "statusDetail": "HT",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
+    "espnGameId": "760416",
+    "lastScoreVerified": "2026-06-12T19:55:16Z",
+    "sourceVerification": {
+      "scoreSource": "ESPN FIFA World Cup match centre",
+      "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
+      "lastScoreVerified": "2026-06-12T19:55:16Z"
+    }
   },
   {
     "id": "M004",

@@ -515,10 +515,17 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Scheduled",
-    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871814/uzbekistan-netherlands",
-    "espnGameId": "401871814"
+    "status": "completed",
+    "statusDetail": "FT",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871814",
+    "espnGameId": "401871814",
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260608-002",
@@ -530,10 +537,17 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Scheduled",
-    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401869804/northern-ireland-france",
-    "espnGameId": "401869804"
+    "status": "completed",
+    "statusDetail": "FT",
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401869804",
+    "espnGameId": "401869804",
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260609-001",
@@ -544,7 +558,18 @@
     "venue": "Toyota Field, San Antonio, Texas",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly"
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871362",
+    "espnGameId": "401871362",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260610-001",
@@ -555,7 +580,18 @@
     "venue": "TBD",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly"
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 4
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874117",
+    "espnGameId": "401874117",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260610-002",
@@ -566,7 +602,18 @@
     "venue": "Estádio Dr. Magalhaes Pessoa, Leiria, Portugal",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly"
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401867372",
+    "espnGameId": "401867372",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260610-003",
@@ -577,7 +624,18 @@
     "venue": "Inter&Co Stadium, Orlando, Florida",
     "tv": {},
     "streaming": {},
-    "sourceUrl": "https://www.englandfootball.com/england/mens-senior-team/fixtures-results"
+    "sourceUrl": "https://www.englandfootball.com/england/mens-senior-team/fixtures-results",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401860829",
+    "espnGameId": "401860829",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
   },
   {
     "id": "F20260606-ESPN-401875164",
@@ -809,11 +867,521 @@
     "tv": {},
     "streaming": {},
     "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
-    "status": "scheduled",
-    "statusDetail": "Scheduled",
-    "score": null,
-    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401867679/spain-peru",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 1,
+      "away": 3
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401867679",
     "espnGameId": "401867679",
+    "highlightsUrl": null,
+    "highlightsLabel": null,
+    "lastScoreVerified": "2026-06-12T19:54:29Z"
+  },
+  {
+    "id": "F20260609-ESPN-401873736",
+    "date": "Tuesday, June 9, 2026",
+    "time": "7:30 AM ET",
+    "homeTeam": "Philippines",
+    "awayTeam": "Myanmar",
+    "venue": "Rizal Memorial Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 5,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873736",
+    "espnGameId": "401873736",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873247",
+    "date": "Tuesday, June 9, 2026",
+    "time": "7:35 AM ET",
+    "homeTeam": "China",
+    "awayTeam": "Thailand",
+    "venue": "Venue not listed",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873247",
+    "espnGameId": "401873247",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873742",
+    "date": "Tuesday, June 9, 2026",
+    "time": "8:00 AM ET",
+    "homeTeam": "Cambodia",
+    "awayTeam": "Hong Kong",
+    "venue": "National Olympic Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873742",
+    "espnGameId": "401873742",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873743",
+    "date": "Tuesday, June 9, 2026",
+    "time": "8:00 AM ET",
+    "homeTeam": "Oman",
+    "awayTeam": "Kuwait",
+    "venue": "Rajamangala National Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "cancelled",
+    "statusDetail": "Canceled",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873743",
+    "espnGameId": "401873743",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873677",
+    "date": "Tuesday, June 9, 2026",
+    "time": "9:00 AM ET",
+    "homeTeam": "Indonesia",
+    "awayTeam": "Mozambique",
+    "venue": "Gelora Bung Karno Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 1,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873677",
+    "espnGameId": "401873677",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873744",
+    "date": "Tuesday, June 9, 2026",
+    "time": "10:00 AM ET",
+    "homeTeam": "Bahrain",
+    "awayTeam": "Syria",
+    "venue": "Gloria Sports Arena",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "cancelled",
+    "statusDetail": "Canceled",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873744",
+    "espnGameId": "401873744",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873508",
+    "date": "Tuesday, June 9, 2026",
+    "time": "10:30 AM ET",
+    "homeTeam": "Kyrgyz Republic",
+    "awayTeam": "Palestine",
+    "venue": "Dolen Omurzakov Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873508",
+    "espnGameId": "401873508",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401866138",
+    "date": "Tuesday, June 9, 2026",
+    "time": "11:00 AM ET",
+    "homeTeam": "Armenia",
+    "awayTeam": "Moldova",
+    "venue": "Vazgen Sargsyan Republican Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401866138",
+    "espnGameId": "401866138",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873738",
+    "date": "Tuesday, June 9, 2026",
+    "time": "11:00 AM ET",
+    "homeTeam": "Ethiopia",
+    "awayTeam": "Malawi",
+    "venue": "Addis Ababa Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 1,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873738",
+    "espnGameId": "401873738",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401871171",
+    "date": "Tuesday, June 9, 2026",
+    "time": "12:00 PM ET",
+    "homeTeam": "Congo DR",
+    "awayTeam": "Chile",
+    "venue": "Stade de la Source",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 1,
+      "away": 2
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871171",
+    "espnGameId": "401871171",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873676",
+    "date": "Tuesday, June 9, 2026",
+    "time": "12:00 PM ET",
+    "homeTeam": "Equatorial Guinea",
+    "awayTeam": "Comoros",
+    "venue": "Stade de Marrakech",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873676",
+    "espnGameId": "401873676",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401874100",
+    "date": "Tuesday, June 9, 2026",
+    "time": "12:00 PM ET",
+    "homeTeam": "Tanzania",
+    "awayTeam": "Rwanda",
+    "venue": "Stade de Marrakech",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "cancelled",
+    "statusDetail": "Canceled",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874100",
+    "espnGameId": "401874100",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401871492",
+    "date": "Tuesday, June 9, 2026",
+    "time": "12:30 PM ET",
+    "homeTeam": "Belarus",
+    "awayTeam": "Burkina Faso",
+    "venue": "Venue not listed",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 2,
+      "away": 2
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871492",
+    "espnGameId": "401871492",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401873740",
+    "date": "Tuesday, June 9, 2026",
+    "time": "1:00 PM ET",
+    "homeTeam": "Angola",
+    "awayTeam": "Central African Republic",
+    "venue": "Venue not listed",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873740",
+    "espnGameId": "401873740",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401861661",
+    "date": "Tuesday, June 9, 2026",
+    "time": "1:00 PM ET",
+    "homeTeam": "Hungary",
+    "awayTeam": "Kazakhstan",
+    "venue": "Nagyerdei Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861661",
+    "espnGameId": "401861661",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401870855",
+    "date": "Tuesday, June 9, 2026",
+    "time": "1:00 PM ET",
+    "homeTeam": "Russia",
+    "awayTeam": "Trinidad and Tobago",
+    "venue": "Kaliningrad Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401870855",
+    "espnGameId": "401870855",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401871580",
+    "date": "Tuesday, June 9, 2026",
+    "time": "2:00 PM ET",
+    "homeTeam": "Azerbaijan",
+    "awayTeam": "San Marino",
+    "venue": "Szombathelyi Haladás Stadion",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 2,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401871580",
+    "espnGameId": "401871580",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401875460",
+    "date": "Tuesday, June 9, 2026",
+    "time": "2:00 PM ET",
+    "homeTeam": "Togo",
+    "awayTeam": "Benin",
+    "venue": "Stade de Kégué",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 5,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875460",
+    "espnGameId": "401875460",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260609-ESPN-401875461",
+    "date": "Tuesday, June 9, 2026",
+    "time": "2:30 PM ET",
+    "homeTeam": "Liberia",
+    "awayTeam": "Sierra Leone",
+    "venue": "Venue not listed",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 1
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875461",
+    "espnGameId": "401875461",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260610-ESPN-401867950",
+    "date": "Wednesday, June 10, 2026",
+    "time": "9:00 PM ET",
+    "homeTeam": "Argentina",
+    "awayTeam": "Iceland",
+    "venue": "Jordan-Hare Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 3,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401867950",
+    "espnGameId": "401867950",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260610-ESPN-401873603",
+    "date": "Wednesday, June 10, 2026",
+    "time": "9:00 PM ET",
+    "homeTeam": "Iraq",
+    "awayTeam": "Venezuela",
+    "venue": "SeatGeek Stadium",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 0,
+      "away": 2
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873603",
+    "espnGameId": "401873603",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260610-ESPN-401875463",
+    "date": "Wednesday, June 10, 2026",
+    "time": "12:00 PM ET",
+    "homeTeam": "Pakistan",
+    "awayTeam": "Afghanistan",
+    "venue": "National Stadium (Maldives)",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "completed",
+    "statusDetail": "FT",
+    "score": {
+      "home": 2,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875463",
+    "espnGameId": "401875463",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
+    "highlightsUrl": null,
+    "highlightsLabel": null
+  },
+  {
+    "id": "F20260611-ESPN-401869744",
+    "date": "Thursday, June 11, 2026",
+    "time": "12:00 AM ET",
+    "homeTeam": "Austria",
+    "awayTeam": "Guatemala",
+    "venue": "Rose Bowl",
+    "tv": {},
+    "streaming": {},
+    "sourceUrl": "https://www.espn.com/soccer/schedule/_/league/fifa.friendly",
+    "status": "cancelled",
+    "statusDetail": "Canceled",
+    "score": {
+      "home": 0,
+      "away": 0
+    },
+    "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401869744",
+    "espnGameId": "401869744",
+    "lastScoreVerified": "2026-06-12T19:54:29Z",
     "highlightsUrl": null,
     "highlightsLabel": null
   }
