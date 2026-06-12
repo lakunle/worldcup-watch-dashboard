@@ -144,7 +144,7 @@
         "shotsOnTarget": "3"
       }
     },
-    "highlightsUrl": "",
+    "highlightsUrl": "https://www.youtube.com/watch?v=SMlw-aAipKI",
     "broadcast": {
       "US": "FOX",
       "UK": "TBD per match — expected rights holders: BBC / ITV split",
@@ -161,7 +161,8 @@
       "scoreSource": "ESPN FIFA World Cup match centre",
       "scoreSourceUrl": "https://www.espn.com/soccer/match/_/gameId/760416",
       "lastScoreVerified": "2026-06-12T21:02:10Z"
-    }
+    },
+    "highlightsLabel": "SuperSport official Match in 5 highlights on YouTube"
   },
   {
     "id": "M004",
